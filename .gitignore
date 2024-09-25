@@ -1,0 +1,4 @@
+mi_entorno/
+*.pyc
+__pycache__/
+.vscode/
