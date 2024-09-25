@@ -164,7 +164,7 @@ def main():
 
   while True:
 
-    console.print("Cuadrados medios --- 1\nProductos medios --- 2\nMultiplicador constante --- 3\n")
+    console.print("Cuadrados medios --- 1\nProductos medios --- 2\nMultiplicador constante --- 3\n Salir --- 4")
     operacion = int(input("Elija una opcion de generacion de numeros pseudoaleatorios: "))
     
     if(operacion==1):
@@ -201,7 +201,7 @@ def main():
       console.print("----   PRUEBAS DE VARIANZA-----")
       varianza(confianza,numerosAleatorios)
 
-    else: 
+    elif operacion==3: 
       console.print("----- MULTIPLICADOR CONSTANTE ----- \n")
       semilla = int(input("Inserte la semilla: "))
       constante = int(input("Inserte la constante: "))
@@ -216,6 +216,8 @@ def main():
       media(numerosAleatorios,confianza)
       console.print("----   PRUEBAS DE VARIANZA-----")
       varianza(confianza,numerosAleatorios)
+    else :
+      break
 
   
 
