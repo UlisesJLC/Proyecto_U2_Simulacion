@@ -158,60 +158,64 @@ def multiplicador_constante(semilla, constante, iteraciones):
 
 
 def main():
-
-  uniformidad()
-  console.print("Cuadrados medios --- 1\nProductos medios --- 2\nMultiplicador constante --- 3\n")
-  operacion = int(input("Elija una opcion de generacion de numeros pseudoaleatorios: "))
   
-  if(operacion==1):
-    console.print("----- CUADRADOS MEDIOS ----- \n")
-    semilla = int(input("Inserte la semilla: "))
-    iteraciones = int(input("Inserte el numero de iteraciones: "))
+  
+  uniformidad() # prueba de como se ve una tabla
 
-    numerosAleatorios=cuadrados_medios(semilla,iteraciones)
+  while True:
 
-    console.print(numerosAleatorios)
-    confianza = int(input("Nivel de confianza: "))/100
-    confianza = int(input("Nivel de confianza: "))/100
-    console.print("----   PRUEBAS DE MEDIAS-----")
-    media(numerosAleatorios,confianza)
-    console.print("----   PRUEBAS DE VARIANZA-----")
-    varianza(confianza,numerosAleatorios)
-
+    console.print("Cuadrados medios --- 1\nProductos medios --- 2\nMultiplicador constante --- 3\n")
+    operacion = int(input("Elija una opcion de generacion de numeros pseudoaleatorios: "))
     
+    if(operacion==1):
+      console.print("----- CUADRADOS MEDIOS ----- \n")
+      semilla = int(input("Inserte la semilla: "))
+      iteraciones = int(input("Inserte el numero de iteraciones: "))
+
+      numerosAleatorios=cuadrados_medios(semilla,iteraciones)
+
+      console.print(numerosAleatorios)
+      confianza = int(input("Nivel de confianza: "))/100
+      confianza = int(input("Nivel de confianza: "))/100
+      console.print("----   PRUEBAS DE MEDIAS-----")
+      media(numerosAleatorios,confianza)
+      console.print("----   PRUEBAS DE VARIANZA-----")
+      varianza(confianza,numerosAleatorios)
+
+      
 
 
-  elif (operacion==2):
-    console.print("----- PRODUCTOS MEDIOS ----- \n")
-    semilla = int(input("Inserte la semilla 1: "))
-    semilla2 = int(input("Inserte la semilla 2: "))
-    iteraciones = int(input("Inserte el numero de iteraciones: "))
+    elif (operacion==2):
+      console.print("----- PRODUCTOS MEDIOS ----- \n")
+      semilla = int(input("Inserte la semilla 1: "))
+      semilla2 = int(input("Inserte la semilla 2: "))
+      iteraciones = int(input("Inserte el numero de iteraciones: "))
 
-    numerosAleatorios=productos_medios(semilla,semilla2,iteraciones)
+      numerosAleatorios=productos_medios(semilla,semilla2,iteraciones)
 
-    console.print(numerosAleatorios)
+      console.print(numerosAleatorios)
 
-    confianza = int(input("Nivel de confianza: "))/100
-    console.print("----   PRUEBAS DE MEDIAS-----")
-    media(numerosAleatorios,confianza)
-    console.print("----   PRUEBAS DE VARIANZA-----")
-    varianza(confianza,numerosAleatorios)
+      confianza = int(input("Nivel de confianza: "))/100
+      console.print("----   PRUEBAS DE MEDIAS-----")
+      media(numerosAleatorios,confianza)
+      console.print("----   PRUEBAS DE VARIANZA-----")
+      varianza(confianza,numerosAleatorios)
 
-  else: 
-    console.print("----- MULTIPLICADOR CONSTANTE ----- \n")
-    semilla = int(input("Inserte la semilla: "))
-    constante = int(input("Inserte la constante: "))
-    iteraciones = int(input("Inserte el numero de iteraciones: "))
+    else: 
+      console.print("----- MULTIPLICADOR CONSTANTE ----- \n")
+      semilla = int(input("Inserte la semilla: "))
+      constante = int(input("Inserte la constante: "))
+      iteraciones = int(input("Inserte el numero de iteraciones: "))
 
-    numerosAleatorios=multiplicador_constante(semilla,constante,iteraciones)
+      numerosAleatorios=multiplicador_constante(semilla,constante,iteraciones)
 
-    console.print(numerosAleatorios)
-    confianza = int(input("Nivel de confianza: "))/100
-    confianza = int(input("Nivel de confianza: "))/100
-    console.print("----   PRUEBAS DE MEDIAS-----")
-    media(numerosAleatorios,confianza)
-    console.print("----   PRUEBAS DE VARIANZA-----")
-    varianza(confianza,numerosAleatorios)
+      console.print(numerosAleatorios)
+      confianza = int(input("Nivel de confianza: "))/100
+      confianza = int(input("Nivel de confianza: "))/100
+      console.print("----   PRUEBAS DE MEDIAS-----")
+      media(numerosAleatorios,confianza)
+      console.print("----   PRUEBAS DE VARIANZA-----")
+      varianza(confianza,numerosAleatorios)
 
   
 
